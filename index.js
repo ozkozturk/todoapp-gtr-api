@@ -79,6 +79,6 @@ server.post('/update', function(req, res, next) {
   });
 });
 
-server.listen(8080, function() {
+server.listen(process.env.PORT || 8080, function() {
   console.log(server.name, server.url);
 });
