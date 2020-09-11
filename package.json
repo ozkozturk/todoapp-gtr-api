@@ -1,0 +1,17 @@
+{
+  "name": "todoapp-gtr-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ozkozturk/todoapp-gtr-api.git",
+  "author": "Özkan Öztürk <ozkozturk@yandex.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.35",
+    "nodemon": "^2.0.4",
+    "restify": "^8.5.1",
+    "restify-cors-middleware": "^1.1.1"
+  }
+}
