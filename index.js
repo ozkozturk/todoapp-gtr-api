@@ -37,7 +37,7 @@ server.get('/', function(req, res, next) {
 });
 
 server.post('/create', function(req, res, next) {
-  const lastTodoId = todos[todos.length - 1].id;
+  const lastTodoId = todos.length > 0 ? todos[todos.length - 1].id : 0;
   const newTodo = {
     id: lastTodoId + 1,
     title: req.body.title,
