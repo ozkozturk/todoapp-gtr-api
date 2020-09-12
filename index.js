@@ -49,7 +49,9 @@ server.post('/create', function(req, res, next) {
   todos.push(newTodo);
 
   res.send(200, {
-    ...newTodo,
+    data: {
+      todos,
+    },
   });
 });
 
@@ -59,7 +61,9 @@ server.post('/delete', function(req, res, next) {
   todos = todos.filter(todo => todo.id !== parseInt(id));
 
   res.send(200, {
-    id,
+    data: {
+      todos,
+    },
   });
 });
 
@@ -75,7 +79,9 @@ server.post('/update', function(req, res, next) {
   todos[todoIndex] = { ...todos[todoIndex], ...updatedTodo };
 
   res.send(200, {
-    ...updatedTodo,
+    data: {
+      todos,
+    },
   });
 });
 
